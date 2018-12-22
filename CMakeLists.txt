@@ -33,6 +33,7 @@
 # 4. make -j
 
 cmake_minimum_required(VERSION 2.8.12)
+include("cmake/HunterGate.cmake")
 project(rocksdb)
 enable_language(CXX)
 enable_language(C)
@@ -85,6 +86,7 @@ else()
   endif()
 
   if(WITH_SNAPPY)
+    hunter_add_package(Snappy)
     find_package(snappy REQUIRED)
     add_definitions(-DSNAPPY)
     include_directories(${SNAPPY_INCLUDE_DIR})
