@@ -34,6 +34,10 @@
 
 cmake_minimum_required(VERSION 2.8.12)
 include("cmake/HunterGate.cmake")
+huntergate(
+  URL "https://github.com/AlexDeveloper24/hunter/archive/v0.23.74.1.tar.gz"
+  SHA1 "04fd7028f3036335ce67dced1b7676d0118b1d9f"
+)
 project(rocksdb)
 enable_language(CXX)
 enable_language(C)
